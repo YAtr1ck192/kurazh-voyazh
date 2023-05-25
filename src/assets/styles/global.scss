@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url("@/assets/fonts/Inter.ttf");
+}
+
+@mixin inter-400 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+}
+@mixin inter-500 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+}
+@mixin inter-600 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+}
+.container {
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+}
