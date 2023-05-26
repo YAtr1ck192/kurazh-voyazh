@@ -4,9 +4,13 @@
       <promoBlock />
       <historyStroke id="historyStroke"/>
       <categoriesMenu />
-      <div class="container">
-          <bigMenuCard />
-      </div>
+      <menuBlock
+          v-for="(menuBlock, index) in menuBlocks"
+          :key="index"
+          :menuBlockData="menuBlock.menuBlockData"
+          :menuBlockComponentsData="menuBlock.menuBlockComponentsData"
+          class="menu-block"
+      />
   </div>
 </template>
 
@@ -15,23 +19,156 @@
 import statusBlock from "@/components/statusBlock";
 import promoBlock from "@/components/promoBlock";
 import historyStroke from "@/components/historyStroke";
-import categoriesMenu from "@/components/categoriesMenu";
-import bigMenuCard from "@/components/menu/bigMenuCard";
+import categoriesMenu from "@/components/categoryList";
+import menuBlock from "@/components/menu/menuBlock";
 
 export default {
-  name: 'HomeView',
-  components: {
-      statusBlock,
-      promoBlock,
-      historyStroke,
-      categoriesMenu,
-      bigMenuCard
-  }
+    name: 'HomeView',
+    data () {
+        return {
+            menuBlocks: [
+                {
+                    menuBlockData: {
+                        logo: '/img/menuBlock-company-logo-1.png',
+                        companyName: 'Футура'
+                    },
+                    menuBlockComponentsData: {
+                        chips: [
+                                    {img: '/img/info-chip-icon-1.png', desc: 'Заказать не позднее чем за:', span: ' 3 часа'},
+                                    {img: '/img/info-chip-icon-2.png', desc: 'Минимальный заказ:', span: ' 5000 ₽'},
+                                    {img: '/img/info-chip-icon-3.png', desc: 'Доставка:', span: ' бесплатно'},
+                                ],
+                        smallCards: [
+                                    {
+                                        img: '/img/small-card-img-1.png',
+                                        title: 'Чипсы, 50гр',
+                                        desc: 'Вкус: соль',
+                                        price: '120 ₽'
+                                    },
+                                    {
+                                        img: '/img/small-card-img-2.png',
+                                        title: 'Клубника, 50гр',
+                                        desc: 'Кусочками',
+                                        price: '250 ₽'
+                                    },
+                                    {
+                                        img: '/img/small-card-img-3.png',
+                                        title: 'Печеный хумус с бастурмой, 60гр',
+                                        desc: 'Нут, тахини, винный уксус, кумин, паприка, бастурма',
+                                        price: '200 ₽'
+                                    },
+                                    {
+                                        img: '/img/small-card-img-4.png',
+                                        title: 'Круассаны, 70гр',
+                                        desc: 'Сливочный сыр, копченый лосось, лисонный сок',
+                                        price: '170 ₽'
+                                    },
+                                ],
+                        bigCards: [
+                                    {
+                                        img1: '/img/big-card-img-1-1.png',
+                                        img2: '/img/big-card-img-1-2.png',
+                                        chip: 'Набор',
+                                        title: 'Набор для двоих, 580гр',
+                                        infoAboutKit: 'На 2 персоны',
+                                        desc: 'Багет, ржанная чиабатта, вафли, гриссини, мусс из цветной капусты с беконом, паштет с вишневым конфи, ассорти сыров и мясных',
+                                        price: '2375 ₽'
+                                    },
+                                    {
+                                        img1: '/img/big-card-img-2-1.png',
+                                        img2: '/img/big-card-img-2-2.png',
+                                        img3: '/img/big-card-img-2-3.png',
+                                        chip: 'Набор',
+                                        title: 'Большой набор , 1100гр',
+                                        infoAboutKit: 'На 4 персоны',
+                                        desc: 'Ассорти мясных деликатесов, ассорти сыров и антипасти, хлебная корзина, парфе из птицы с фисташкой, гуаккамоле, хумус с брезаолой, риет из',
+                                        price: '4000 ₽'
+                                    },
+                                ]
+                    },
+                },
+                {
+                    menuBlockData: {
+                        logo: '/img/menuBlock-company-logo-2.png',
+                        companyName: 'ProBrbnch'
+                    },
+                    menuBlockComponentsData: {
+                        chips: [
+                            {img: '/img/info-chip-icon-1.png', desc: 'Заказать не позднее чем за:', span: ' 2 часа'},
+                            {img: '/img/info-chip-icon-2.png', desc: 'Минимальный заказ:', span: ' 3000 ₽'},
+                            {img: '/img/info-chip-icon-3.png', desc: 'Доставка:', span: ' 500 ₽'},
+                        ],
+                        smallCards: [
+                            {
+                                img: '/img/small-card-img-3.png',
+                                title: 'Печеный хумус с бастурмой, 60гр',
+                                desc: 'Нут, тахини, винный уксус, кумин, паприка, бастурма',
+                                price: '200 ₽'
+                            },
+                            {
+                                img: '/img/small-card-img-1.png',
+                                title: 'Чипсы, 50гр',
+                                desc: 'Вкус: соль',
+                                price: '120 ₽'
+                            },
+                            {
+                                img: '/img/small-card-img-4.png',
+                                title: 'Круассаны, 70гр',
+                                desc: 'Сливочный сыр, копченый лосось, лисонный сок',
+                                price: '170 ₽'
+                            },
+                            {
+                                img: '/img/small-card-img-2.png',
+                                title: 'Клубника, 50гр',
+                                desc: 'Кусочками',
+                                price: '250 ₽'
+                            },
+                        ],
+                        bigCards: [
+                            {
+                                img1: '/img/big-card-img-2-1.png',
+                                img2: '/img/big-card-img-2-2.png',
+                                img3: '/img/big-card-img-2-3.png',
+                                chip: 'Набор',
+                                title: 'Большой набор , 1100гр',
+                                infoAboutKit: 'На 4 персоны',
+                                desc: 'Ассорти мясных деликатесов, ассорти сыров и антипасти, хлебная корзина, парфе из птицы с фисташкой, гуаккамоле, хумус с брезаолой, риет из',
+                                price: '4000 ₽'
+                            },
+                            {
+                                img1: '/img/big-card-img-1-1.png',
+                                img2: '/img/big-card-img-1-2.png',
+                                chip: 'Набор',
+                                title: 'Набор для двоих, 580гр',
+                                infoAboutKit: 'На 2 персоны',
+                                desc: 'Багет, ржанная чиабатта, вафли, гриссини, мусс из цветной капусты с беконом, паштет с вишневым конфи, ассорти сыров и мясных',
+                                price: '2375 ₽'
+                            },
+                        ]
+                    },
+                }
+            ]
+        }
+    },
+    components: {
+        statusBlock,
+        promoBlock,
+        historyStroke,
+        categoriesMenu,
+        menuBlock
+    }
 }
 </script>
 
 <style scoped lang="scss">
     #historyStroke {
         margin-bottom: 20px;
+    }
+    .menu-block {
+        margin-bottom: 80px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
     }
 </style>

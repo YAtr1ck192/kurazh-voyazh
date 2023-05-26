@@ -1,18 +1,18 @@
 <template>
     <div class="smallMenuCard">
-        <img src="/img/small-card-img-1.png" alt="small-card-img" class="card-img">
+        <img :src="smallCard.img" alt="small-card-img" class="card-img">
         <div class="card-content">
             <div class="top-and-middle-items">
                 <div class="items-in-top">
-                    <h3 class="title">Чипсы, 50гр</h3>
+                    <h3 class="title">{{ smallCard.title }}</h3>
                     <router-link to="/" class="food-info-icon">
                         <img src="/img/food-info-icon.png" alt="food-info-icon">
                     </router-link>
                 </div>
-                <div class="card-desc">Вкус: соль</div>
+                <div class="card-desc">{{ smallCard.desc }}</div>
             </div>
             <div class="items-in-bottom">
-                <div class="card-price">120 ₽</div>
+                <div class="card-price">{{ smallCard.price }}</div>
                 <cartButton />
             </div>
         </div>
@@ -25,7 +25,8 @@ export default {
     name: "smallMenuCard",
     components: {
         cartButton
-    }
+    },
+    props: ['smallCard']
 }
 </script>
 
@@ -38,7 +39,6 @@ export default {
         border-radius: 20px;
         background: white;
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-        margin-bottom: 100px;
 
         .card-img {
             width: 100%;

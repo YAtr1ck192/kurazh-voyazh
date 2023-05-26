@@ -2,12 +2,11 @@
     <div class="container">
         <div class="categories-menu-content">
             <section class="categories-menu-chips">
-                <router-link to="/" class="categories-menu-chip">Роллы</router-link>
-                <router-link to="/" class="categories-menu-chip">Вино</router-link>
-                <router-link to="/" class="categories-menu-chip">Пицца</router-link>
-                <router-link to="/" class="categories-menu-chip">Устрицы</router-link>
-                <router-link to="/" class="categories-menu-chip">Острое</router-link>
-                <router-link to="/" class="categories-menu-chip">Новинки</router-link>
+                <menuChip
+                    v-for="(chip, index) in chips"
+                    :key="index"
+                    :chip="chip"
+                />
             </section>
             <div class="menu-search-box">
                 <input type="text" class="menu-search-form">
@@ -20,13 +19,29 @@
 </template>
 
 <script>
+import menuChip from "@/components/filterChip";
 export default {
-    name: "categoriesMenu"
+    name: "categoriesMenu",
+    data () {
+        return {
+            chips: [
+                {name: 'Роллы', link: '/'},
+                {name: 'Вино', link: '/'},
+                {name: 'Пицца', link: '/'},
+                {name: 'Устрицы', link: '/'},
+                {name: 'Острое', link: '/'},
+                {name: 'Новинки', link: '/'},
+            ]
+        }
+    },
+    components: {
+        menuChip
+    }
 }
 </script>
 
 <style scoped lang="scss">
-    @import "src/assets/styles/global";
+    @import "../assets/styles/global";
     .categories-menu-content {
         display: flex;
         align-items: center;
@@ -36,19 +51,6 @@ export default {
         .categories-menu-chips {
             display: flex;
             align-items: center;
-
-            .categories-menu-chip {
-                padding: 7px 15px;
-                border-radius: 50px;
-                margin-right: 12px;
-                font-size: 16px;
-                line-height: 20px;
-                @include chip;
-
-                &:hover {
-                    @include chipHover;
-                }
-            }
         }
         .menu-search-box {
             display: flex;

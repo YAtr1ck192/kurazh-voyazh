@@ -1,17 +1,24 @@
 <template>
     <div class="bigMenuCard">
         <div class="card-images">
-            <img src="/img/big-card-img-1-1.png" alt="big-card-img" class="card-img">
-            <img src="/img/big-card-img-1-2.png" alt="big-card-img" class="card-img">
+            <template v-if="bigCard.img3">
+                <img :src="bigCard.img1" alt="big-card-img" class="card-img" style="max-width: 210px">
+                <img :src="bigCard.img2" alt="big-card-img" class="card-img" style="max-width: 210px">
+                <img :src="bigCard.img3" alt="big-card-img" class="card-img" style="max-width: 210px">
+            </template>
+            <template v-else-if="!bigCard.img3">
+                <img :src="bigCard.img1" alt="big-card-img" class="card-img">
+                <img :src="bigCard.img2" alt="big-card-img" class="card-img">
+            </template>
         </div>
         <div class="card-content">
             <div class="top-and-middle-items">
                 <div class="items-in-top">
                     <div class="title-and-chip">
                         <div class="chip">
-                            Набор
+                            {{ bigCard.chip }}
                         </div>
-                        <h3 class="title">Набор для двоих, 580гр</h3>
+                        <h3 class="title">{{ bigCard.title }}</h3>
                     </div>
                     <router-link to="/" class="food-info-icon">
                         <img src="/img/food-info-icon.png" alt="food-info-icon">
@@ -19,12 +26,12 @@
                 </div>
                 <div class="info-about-kit">
                     <img src="/img/kit-info-icon.png" alt="kit-info-icon" class="info-about-kit-icon">
-                    <div>На 2 персоны</div>
+                    <div>{{ bigCard.infoAboutKit }}</div>
                 </div>
-                <div class="card-desc">Багет, ржанная чиабатта, вафли, гриссини, мусс из цветной капусты с беконом, паштет с вишневым конфи, ассорти сыров и мясных</div>
+                <div class="card-desc">{{ bigCard.desc }}</div>
             </div>
             <div class="items-in-bottom">
-                <div class="card-price">2375 ₽</div>
+                <div class="card-price">{{ bigCard.price }}</div>
                 <cartButton />
             </div>
         </div>
@@ -37,7 +44,8 @@ export default {
     name: "bigMenuCard",
     components: {
         cartButton
-    }
+    },
+    props: ['bigCard']
 }
 </script>
 
@@ -49,7 +57,6 @@ export default {
     border-radius: 20px;
     background: white;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 100px;
 
     .card-images {
         display: flex;
