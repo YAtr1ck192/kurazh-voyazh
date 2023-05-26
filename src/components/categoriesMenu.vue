@@ -39,18 +39,14 @@ export default {
 
             .categories-menu-chip {
                 padding: 7px 15px;
-                background: #F4F6F9;
                 border-radius: 50px;
                 margin-right: 12px;
                 font-size: 16px;
                 line-height: 20px;
-                @include inter-400;
-                text-decoration: none;
-                color: #0E254B99;
+                @include chip;
 
                 &:hover {
-                    color: #0E254B;
-                    background: #D5E5FB;
+                    @include chipHover;
                 }
             }
         }

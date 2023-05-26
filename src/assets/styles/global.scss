@@ -29,6 +29,21 @@
     font-family: 'Montserrat', sans-serif;
     font-weight: 900;
 }
+@mixin mont-700 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+@mixin chip {
+    background: #F4F6F9;
+    @include inter-400;
+    text-decoration: none;
+    color: #0E254B99;
+}
+@mixin chipHover {
+    color: #0E254B;
+    background: #D5E5FB;
+}
+
 .container {
     width: 100%;
     max-width: 1300px;

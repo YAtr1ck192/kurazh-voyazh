@@ -24,7 +24,7 @@
                     </div>
                 </router-link>
                 <router-link to="/" class="favorites-box">
-                    <img src="/img/status-block-save.png" alt="status-block-favorites" class="user-favorites-img">
+                    <img src="/img/status-block-favorites.png" alt="status-block-favorites" class="user-favorites-img">
                     <div class="favorites-value">
                         2
                     </div>

@@ -20,7 +20,7 @@ export default {
       statusBlock,
       promoBlock,
       historyStroke,
-      categoriesMenu
+      categoriesMenu,
   }
 }
 </script>
