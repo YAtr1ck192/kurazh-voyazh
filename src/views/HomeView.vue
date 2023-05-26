@@ -4,6 +4,9 @@
       <promoBlock />
       <historyStroke id="historyStroke"/>
       <categoriesMenu />
+      <div class="container">
+          <bigMenuCard />
+      </div>
   </div>
 </template>
 
@@ -13,6 +16,7 @@ import statusBlock from "@/components/statusBlock";
 import promoBlock from "@/components/promoBlock";
 import historyStroke from "@/components/historyStroke";
 import categoriesMenu from "@/components/categoriesMenu";
+import bigMenuCard from "@/components/menu/bigMenuCard";
 
 export default {
   name: 'HomeView',
@@ -21,6 +25,7 @@ export default {
       promoBlock,
       historyStroke,
       categoriesMenu,
+      bigMenuCard
   }
 }
 </script>

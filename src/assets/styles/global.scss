@@ -43,7 +43,14 @@
     color: #0E254B;
     background: #D5E5FB;
 }
-
+@mixin card-desc {
+    margin-top: 10px;
+    max-height: 34px;
+    @include inter-400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #0E254B99;
+}
 .container {
     width: 100%;
     max-width: 1300px;
