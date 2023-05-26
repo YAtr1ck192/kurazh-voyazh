@@ -8,6 +8,10 @@
     font-family: 'Inter';
     src: url("@/assets/fonts/Inter.ttf");
 }
+@font-face {
+    font-family: 'Montserrat';
+    src: url("@/assets/fonts/Montserrat.ttf");
+}
 
 @mixin inter-400 {
     font-family: 'Inter', sans-serif;
@@ -20,6 +24,10 @@
 @mixin inter-600 {
     font-family: 'Inter', sans-serif;
     font-weight: 600;
+}
+@mixin mont-900 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
 }
 .container {
     width: 100%;
