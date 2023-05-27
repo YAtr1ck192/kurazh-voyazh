@@ -20,6 +20,7 @@
               class="slider-block"
           />
       </div>
+      <advantagesBlock id="advantagesBlock"/>
   </div>
 </template>
 
@@ -31,6 +32,7 @@ import historyStroke from "@/components/historyStroke";
 import categoriesMenu from "@/components/categoryList";
 import menuBlock from "@/components/menu/menuBlock";
 import sliderBlock from "@/components/slider/sliderBlock";
+import advantagesBlock from "@/components/advantages/advantagesBlock";
 
 export default {
     name: 'HomeView',
@@ -210,7 +212,8 @@ export default {
         historyStroke,
         categoriesMenu,
         menuBlock,
-        sliderBlock
+        sliderBlock,
+        advantagesBlock
     }
 }
 </script>
@@ -236,5 +239,7 @@ export default {
             background: linear-gradient(to right top, rgba(255, 182, 129, 0.7), rgba(255, 197, 189, 0.7));
         }
     }
-
+    #advantagesBlock {
+        margin-bottom: 130px;
+    }
 </style>
