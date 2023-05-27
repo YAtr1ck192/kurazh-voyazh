@@ -191,44 +191,16 @@ export default {
                                 desc: 'Португалия, белое полусухое 9,5%',
                                 price: '13 000 ₽'
                             },
-                        ],
-                    },
-                },
-                {
-                    sliderBlockData: {
-                        logo: '/img/vine-company-logo-1.png',
-                        companyName: 'Винный вояж & Винный склад',
-                        productCount: '12'
-                    },
-                    sliderBlockComponentsData: {
-                        sliderCards: [
                             {
                                 img: '/img/slider-card-1.png',
                                 title: 'Toucas, Vinho Verde DOC, 2021',
                                 desc: 'Португалия, белое полусухое 9,5%',
                                 price: '1900 ₽'
                             },
-                            {
-                                img: '/img/slider-card-2.png',
-                                title: 'Pago Casa Gran, Falcata White, Valencia DO, 2021',
-                                desc: 'Португалия, белое полусухое 9,5%',
-                                price: '1950 ₽'
-                            },
-                            {
-                                img: '/img/slider-card-3.png',
-                                title: 'Belguardo Vermentino, Toscana IGT, 2020',
-                                desc: 'Португалия, белое полусухое 9,5%',
-                                price: '2000 ₽'
-                            },
-                            {
-                                img: '/img/slider-card-4.png',
-                                title: 'Loveblock Pinot Gris, 2020',
-                                desc: 'Португалия, белое полусухое 9,5%',
-                                price: '13 000 ₽'
-                            },
                         ],
                     },
                 },
+
             ],
         }
     },

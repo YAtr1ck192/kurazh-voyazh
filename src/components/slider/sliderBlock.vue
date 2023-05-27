@@ -29,6 +29,7 @@ export default {
 .slider-block-content {
     border-radius: 30px;
     padding: 30px 0 25px 50px;
+    overflow: hidden;
 
     .item-in-top {
         display: flex;
@@ -47,29 +48,6 @@ export default {
                 color: #0E254B99;
                 margin-left: 26px;
             }
-        }
-    }
-    .small-cards, .big-cards {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-bottom: 30px;
-    }
-    .pagination-block {
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-
-        .more {
-            color: #FF6B17;
-            background: #FFE9DC;
-            border-radius: 50px;
-            border: solid 1px #FF6B1726;
-            padding: 9px 30px;
-            @include inter-600;
-            font-size: 16px;
-            line-height: 30px;
-            cursor: pointer;
         }
     }
 }
