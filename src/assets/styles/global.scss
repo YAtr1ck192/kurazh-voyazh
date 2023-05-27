@@ -79,8 +79,10 @@
         color: #0E254B;
     }
 }
+$maxWidthOnPc: 1300px;
+
 .container {
     width: 100%;
-    max-width: 1300px;
+    max-width: $maxWidthOnPc;
     margin: 0 auto;
 }
