@@ -59,9 +59,7 @@ export default {
                     justify-content: space-between;
 
                     .title {
-                        @include inter-600;
-                        font-size: 18px;
-                        line-height: 23px;
+                        @include card-title;
                         max-width: 260px;
                     }
                     .food-info-icon {
@@ -84,10 +82,7 @@ export default {
                 align-items: center;
 
                 .card-price {
-                    @include mont-700;
-                    font-size: 22px;
-                    line-height: 27px;
-                    color: #3485FF;
+                    @include card-price;
                 }
 
             }

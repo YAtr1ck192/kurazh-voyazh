@@ -51,6 +51,34 @@
     line-height: 17px;
     color: #0E254B99;
 }
+@mixin card-price {
+    @include mont-700;
+    font-size: 22px;
+    line-height: 27px;
+    color: #3485FF;
+}
+@mixin card-title {
+    @include inter-600;
+    font-size: 18px;
+    line-height: 23px;
+}
+@mixin logo-and-name-company {
+
+    display: flex;
+    align-items: center;
+
+    .company-logo {
+        width: 111px;
+        height: 44px;
+        margin-right: 26px;
+    }
+    .company-name {
+        @include mont-700;
+        font-size: 35px;
+        line-height: 43px;
+        color: #0E254B;
+    }
+}
 .container {
     width: 100%;
     max-width: 1300px;

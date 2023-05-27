@@ -11,6 +11,15 @@
           :menuBlockComponentsData="menuBlock.menuBlockComponentsData"
           class="menu-block"
       />
+      <div class="container">
+          <sliderBlock
+              v-for="(sliderBlock, index) in sliderBlocks"
+              :key="index"
+              :sliderBlock="sliderBlock.sliderBlockData"
+              :sliderBlockComponents="sliderBlock.sliderBlockComponentsData"
+              class="slider-block"
+          />
+      </div>
   </div>
 </template>
 
@@ -21,6 +30,7 @@ import promoBlock from "@/components/promoBlock";
 import historyStroke from "@/components/historyStroke";
 import categoriesMenu from "@/components/categoryList";
 import menuBlock from "@/components/menu/menuBlock";
+import sliderBlock from "@/components/slider/sliderBlock";
 
 export default {
     name: 'HomeView',
@@ -147,7 +157,79 @@ export default {
                         ]
                     },
                 }
-            ]
+            ],
+            sliderBlocks: [
+                {
+                    sliderBlockData: {
+                        logo: '/img/vine-company-logo-1.png',
+                        companyName: 'Винный вояж & Винный склад',
+                        productCount: '12'
+                    },
+                    sliderBlockComponentsData: {
+                        sliderCards: [
+                            {
+                                img: '/img/slider-card-1.png',
+                                title: 'Toucas, Vinho Verde DOC, 2021',
+                                desc: 'Португалия, белое полусухое 9,5%',
+                                price: '1900 ₽'
+                            },
+                            {
+                                img: '/img/slider-card-2.png',
+                                title: 'Pago Casa Gran, Falcata White, Valencia DO, 2021',
+                                desc: 'Португалия, белое полусухое 9,5%',
+                                price: '1950 ₽'
+                            },
+                            {
+                                img: '/img/slider-card-3.png',
+                                title: 'Belguardo Vermentino, Toscana IGT, 2020',
+                                desc: 'Португалия, белое полусухое 9,5%',
+                                price: '2000 ₽'
+                            },
+                            {
+                                img: '/img/slider-card-4.png',
+                                title: 'Loveblock Pinot Gris, 2020',
+                                desc: 'Португалия, белое полусухое 9,5%',
+                                price: '13 000 ₽'
+                            },
+                        ],
+                    },
+                },
+                {
+                    sliderBlockData: {
+                        logo: '/img/vine-company-logo-1.png',
+                        companyName: 'Винный вояж & Винный склад',
+                        productCount: '12'
+                    },
+                    sliderBlockComponentsData: {
+                        sliderCards: [
+                            {
+                                img: '/img/slider-card-1.png',
+                                title: 'Toucas, Vinho Verde DOC, 2021',
+                                desc: 'Португалия, белое полусухое 9,5%',
+                                price: '1900 ₽'
+                            },
+                            {
+                                img: '/img/slider-card-2.png',
+                                title: 'Pago Casa Gran, Falcata White, Valencia DO, 2021',
+                                desc: 'Португалия, белое полусухое 9,5%',
+                                price: '1950 ₽'
+                            },
+                            {
+                                img: '/img/slider-card-3.png',
+                                title: 'Belguardo Vermentino, Toscana IGT, 2020',
+                                desc: 'Португалия, белое полусухое 9,5%',
+                                price: '2000 ₽'
+                            },
+                            {
+                                img: '/img/slider-card-4.png',
+                                title: 'Loveblock Pinot Gris, 2020',
+                                desc: 'Португалия, белое полусухое 9,5%',
+                                price: '13 000 ₽'
+                            },
+                        ],
+                    },
+                },
+            ],
         }
     },
     components: {
@@ -155,7 +237,8 @@ export default {
         promoBlock,
         historyStroke,
         categoriesMenu,
-        menuBlock
+        menuBlock,
+        sliderBlock
     }
 }
 </script>
@@ -171,4 +254,15 @@ export default {
             margin-bottom: 0;
         }
     }
+    .slider-block {
+        margin-bottom: 70px;
+
+        &:nth-child(1) {
+            background: linear-gradient(to right top, rgba(129, 202, 255, 0.7), rgba(189, 227, 255, 0.7));
+        }
+        &:nth-child(2) {
+            background: linear-gradient(to right top, rgba(255, 182, 129, 0.7), rgba(255, 197, 189, 0.7));
+        }
+    }
+
 </style>

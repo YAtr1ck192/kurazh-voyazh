@@ -55,8 +55,6 @@ export default {
 <style scoped lang="scss">
 @import "src/assets/styles/global";
 .menu-block-content {
-
-
     .item-in-top {
         display: flex;
         align-items: center;
@@ -64,20 +62,7 @@ export default {
         margin-bottom: 25px;
 
         .logo-and-name-company {
-            display: flex;
-            align-items: center;
-
-            .company-logo {
-                width: 111px;
-                height: 44px;
-                margin-right: 26px;
-            }
-            .company-name {
-                @include mont-700;
-                font-size: 35px;
-                line-height: 43px;
-                color: #0E254B;
-            }
+            @include logo-and-name-company;
         }
         .chips-about-order {
             display: flex;
